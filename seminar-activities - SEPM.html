@@ -59,42 +59,43 @@
 
 										<p><b>RESPONSE</b></p>
 										<h4>Interfacing with a new SatNav system scenario </h4>
-										<pre><code> from behave import given, when, then
+		<pre><code> from behave import given, when, then
 
-										# Scenario 1: Driver sets up destination
-										@given('the SatNav system is powered on')
-										def step_impl(context):
-										    context.satnav_powered_on = True
-										    print("SatNav system powered on.")
+		# Scenario 1: Driver sets up destination
+		@given('the SatNav system is powered on')
+		def step_impl(context):
+			context.satnav_powered_on = True
+			print("SatNav system powered on.")
 
-										@given('the driver is seated in the vehicle')
-										def step_impl(context):
-										    context.driver_seated = True
-										    print("Driver is seated.")
+		@given('the driver is seated in the vehicle')
+		def step_impl(context):
+			context.driver_seated = True
+			print("Driver is seated.")
 										
-										@when('the driver inputs the destination address')
-										def step_impl(context):
-										    if context.satnav_powered_on and context.driver_seated:
-										        context.destination_set = True
-										        print("Destination address inputted.")
-										    else:
-										        context.destination_set = False
+		@when('the driver inputs the destination address')
+		def step_impl(context):
+			if context.satnav_powered_on and context.driver_seated:
+				context.destination_set = True
+				print("Destination address inputted.")
+			else:
+				context.destination_set = False
+				
+		@then('the SatNav system should calculate the best route')
+		def step_impl(context):
+			if context.destination_set:
+				context.route_calculated = True
+				print("Best route calculated.")
+		   	else: 
+				context.route_calculated = False
 										
-										@then('the SatNav system should calculate the best route')
-										def step_impl(context):
-										    if context.destination_set:
-										        context.route_calculated = True
-										        print("Best route calculated.")
-										    else: 
-										        context.route_calculated = False
+		@then('the system should display the estimated time of arrival')
+		def step_impl(context):
+		    	if context.route_calculated:
+				print("Estimated time of arrival displayed.")
 										
-										@then('the system should display the estimated time of arrival')
-										def step_impl(context):
-										    if context.route_calculated:
-										        print("Estimated time of arrival displayed.")
 										
-										# Scenario 2: System Administrator updates the SatNav software
-										@given('the SatNav system is connected to the internet')
+		# Scenario 2: System Administrator updates the SatNav software
+		@given('the SatNav system is connected to the internet')
 										def step_impl(context):
 										    context.internet_connected = True
 										    print("SatNav connected to the internet.")
