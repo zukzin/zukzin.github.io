@@ -57,110 +57,120 @@
 										<li>Creating a batch or shell script.</li>
 										<p>Your response should consist of at least three scenarios describing different roles such as administrator, user, driver and so on. Be prepared to share your scenarios at this week's seminar. You can test your Gherkin scripts in the Behave engine.</p>
 
-										<p><b>RESPONSE USING Interfacing with a new SatNav system </b></p>
-										<h4>Preformatted</h4>
+										<p><b>RESPONSE</b></p>
+										<h4>Interfacing with a new SatNav system scenario </h4>
 										<pre><code> from behave import given, when, then
 
-# Scenario 1: Driver sets up destination
-@given('the SatNav system is powered on')
-def step_impl(context):
-    context.satnav_powered_on = True
-    print("SatNav system powered on.")
+										# Scenario 1: Driver sets up destination
+										@given('the SatNav system is powered on')
+										def step_impl(context):
+										    context.satnav_powered_on = True
+										    print("SatNav system powered on.")
 
-@given('the driver is seated in the vehicle')
-def step_impl(context):
-    context.driver_seated = True
-    print("Driver is seated.")
-
-@when('the driver inputs the destination address')
-def step_impl(context):
-    if context.satnav_powered_on and context.driver_seated:
-        context.destination_set = True
-        print("Destination address inputted.")
-    else:
-        context.destination_set = False
-
-@then('the SatNav system should calculate the best route')
-def step_impl(context):
-    if context.destination_set:
-        context.route_calculated = True
-        print("Best route calculated.")
-    else: 
-        context.route_calculated = False
-
-@then('the system should display the estimated time of arrival')
-def step_impl(context):
-    if context.route_calculated:
-        print("Estimated time of arrival displayed.")
-
-# Scenario 2: System Administrator updates the SatNav software
-@given('the SatNav system is connected to the internet')
-def step_impl(context):
-    context.internet_connected = True
-    print("SatNav connected to the internet.")
-
-@given('the System Administrator has the latest software update file')
-def step_impl(context):
-    context.update_file_ready = True
-    print("Software update file ready.")
-
-@when('the System Administrator initiates the update')
-def step_impl(context):
-    if context.internet_connected and context.update_file_ready:
-        context.update_initiated = True
-        print("Update initiated.")
-    else:
-        context.update_initiated = False
-
-@then('the SatNav system should install the update')
-def step_impl(context):
-    if context.update_initiated:
-        context.update_installed = True
-        print("Update installed.")
-    else:
-        context.update_installed = False
-
-@then('the system should restart to apply the changes')
-def step_impl(context):
-    if context.update_installed:
-        print("System restarting to apply changes.")
-
-# Scenario 3: Passenger checks for alternative routes
-@given('the SatNav system is currently navigating to a destination')
-def step_impl(context):
-    context.navigating = True
-    print("SatNav currently navigating.")
-
-@given('there is traffic on the current route')
-def step_impl(context):
-    context.traffic_detected = True
-    print("Traffic detected on the current route.")
-
-@when('the passenger selects the "Alternative Routes" option')
-def step_impl(context):
-    if context.navigating and context.traffic_detected:
-        context.alternative_routes_available = True
-        print("Passenger selected 'Alternative Routes' option.")
-    else:
-        context.alternative_routes_available = False
-
-@then('the SatNav system should display a list of alternative routes')
-def step_impl(context):
-    if context.alternative_routes_available:
-        print("Displaying list of alternative routes.")
-
-@then('the passenger can select the preferred route')
-def step_impl(context):
-    if context.alternative_routes_available:
-        print("Passenger selected preferred route.")
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+										@given('the driver is seated in the vehicle')
+										def step_impl(context):
+										    context.driver_seated = True
+										    print("Driver is seated.")
 										
+										@when('the driver inputs the destination address')
+										def step_impl(context):
+										    if context.satnav_powered_on and context.driver_seated:
+										        context.destination_set = True
+										        print("Destination address inputted.")
+										    else:
+										        context.destination_set = False
+										
+										@then('the SatNav system should calculate the best route')
+										def step_impl(context):
+										    if context.destination_set:
+										        context.route_calculated = True
+										        print("Best route calculated.")
+										    else: 
+										        context.route_calculated = False
+										
+										@then('the system should display the estimated time of arrival')
+										def step_impl(context):
+										    if context.route_calculated:
+										        print("Estimated time of arrival displayed.")
+										
+										# Scenario 2: System Administrator updates the SatNav software
+										@given('the SatNav system is connected to the internet')
+										def step_impl(context):
+										    context.internet_connected = True
+										    print("SatNav connected to the internet.")
+										
+										@given('the System Administrator has the latest software update file')
+										def step_impl(context):
+										    context.update_file_ready = True
+										    print("Software update file ready.")
+										
+										@when('the System Administrator initiates the update')
+										def step_impl(context):
+										    if context.internet_connected and context.update_file_ready:
+										        context.update_initiated = True
+										        print("Update initiated.")
+										    else:
+										        context.update_initiated = False
+										
+										@then('the SatNav system should install the update')
+										def step_impl(context):
+										    if context.update_initiated:
+										        context.update_installed = True
+										        print("Update installed.")
+										    else:
+										        context.update_installed = False
+										
+										@then('the system should restart to apply the changes')
+										def step_impl(context):
+										    if context.update_installed:
+										        print("System restarting to apply changes.")
+										
+										# Scenario 3: Passenger checks for alternative routes
+										@given('the SatNav system is currently navigating to a destination')
+										def step_impl(context):
+										    context.navigating = True
+										    print("SatNav currently navigating.")
+										
+										@given('there is traffic on the current route')
+										def step_impl(context):
+										    context.traffic_detected = True
+										    print("Traffic detected on the current route.")
+										
+										@when('the passenger selects the "Alternative Routes" option')
+										def step_impl(context):
+										    if context.navigating and context.traffic_detected:
+										        context.alternative_routes_available = True
+										        print("Passenger selected 'Alternative Routes' option.")
+										    else:
+										        context.alternative_routes_available = False
+										
+										@then('the SatNav system should display a list of alternative routes')
+										def step_impl(context):
+										    if context.alternative_routes_available:
+										        print("Displaying list of alternative routes.")
+										
+										@then('the passenger can select the preferred route')
+										def step_impl(context):
+										    if context.alternative_routes_available:
+										        print("Passenger selected preferred route.")</code></pre>
+										
+										<h4>OUTPUT</h4>
+										<pre><code>
+											USING RUNNER: behave.runner:Runner
+											Feature: Getting Familiar with a New SatNav System # satnav.feature:1
+											  As a user of a new SatNav system
+											  I want to perform basic operations
+											  So that I can efficiently navigate to my destination
+											    And the system should display the estimated time of arrival # satnav_steps.py:30 0.000s
+											    And the system should display the estimated time of arrival # satnav_steps.py:30
+											    And the system should restart to apply the changes               # satnav_steps.py:62 0.000s
+											    And the system should restart to apply the changes               # satnav_steps.py:62
+											    And the passenger can select the preferred route                   # satnav_steps.py:91 0.000s
+											    And the passenger can select the preferred route                   # satnav_steps.py:91
+											1 feature passed, 0 failed, 0 skipped
+											3 scenarios passed, 0 failed, 0 skipped
+											15 steps passed, 0 failed, 0 skipped, 0 undefined
+											</code></pre>
 
 										
 										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
