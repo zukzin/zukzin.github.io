@@ -64,6 +64,7 @@
 										<li>Social Media - throughout the day catching up with news, friends and family using Facebook, Instagram and Twitter</li>
 										<li>Streaming platforms - after a long day of work and doing assignments, I stream before going to bed on Netflix of Sky</li>
 										<li>E-commerce site - to order for my family on platforms like Marks & Spencer, Currys or B&Q</li>
+										<br>
 
 										<p><b>Step 2: Identify Core Operations of the System in relation to Data Structures</b></p>
 										<p>When I work on my emails, the core operations that I use of that email service are:</p>
@@ -71,15 +72,23 @@
 										<li>Sending and receiving emails</li>
 										<li>Searching through old emails</li>
 										<li>Labelling and categorising my emails</li>
-										
+										<br>
 										<p><b>Step 3: Mapping Back-end Operations Data Structures</b></p>
 										<p>Looking and thinking how data structures are used in the back end to implement the functionality of the email service I thought through the different functionalities</p>
-										<li><b>Email inbox management:</b>b></li>
-										<ul>Queue Data Structure - emails are stored in a queue (FIFO structure), ensuring that the newer emails are added at the end and older emails are processed first when viewed. Alternatively, a list</ul>
-										<li></li>
-										<li></li>
-										<li></li>
-											
+										
+										<li><b>Email inbox management:</b>></li>
+										<ul>Queue Data Structure - emails are stored in a queue (FIFO structure), ensuring that the newer emails are added at the end and older emails are processed first when viewed.</ul>
+										<ul>List Data Structure – is necessary and used when sorting and searching operations</ul>
+										<li>Searching emails:</li>
+										<ul>Hash Map Data Structure – is used to map the keywords or sender names to email IDs to enable quick lookups.</ul>
+										<ul>Binary Search Tree Data Structure – is used to keep these emails sorted by date, sender or subject line for fast retrieval based on the criteria used.</ul>
+										<li>Labelling or categorizing emails:</li>
+										<ul>Tree Data Structure – used when organizing emails under categories where the search folder is a node, and subfolders can be children of that node.</ul>
+										<ul>Graph Data Structure – is used if the emails can belong to multiple categories or labels (with edges representing connections between categories and emails).</ul>
+										<li>Sending and receiving emails:</li>
+										<ul>Queue Data Structure – sending and receiving emails is handled by queues on the server side, where each email is processed In order it's received (FIFO)</ul>
+
+										<p><b>Step 4: The Relationship Between Data Structures and Functionality</b></p>
 										</p>
 										<h4>Preformatted</h4>
 										<pre><code>i = 0;
