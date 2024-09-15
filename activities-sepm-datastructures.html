@@ -81,28 +81,26 @@
 										<ul></ul>List Data Structure – is necessary and used when sorting and searching operations</ul>
 										
 										<li><b>Searching emails:</b></li>
-										<ul>Hash Map Data Structure – is used to map the keywords or sender names to email IDs to enable quick lookups.
+										<ul>Hash Map Data Structure – maps the keywords or sender names to email IDs to enable quick lookups.
 										<ul></ul>Binary Search Tree Data Structure – is used to keep these emails sorted by date, sender or subject line for fast retrieval based on the criteria used.</ul>
 										
 										<li><b>Labelling or categorizing emails:</b></li>
-										<ul>Tree Data Structure – used when organizing emails under categories where the search folder is a node, and subfolders can be children of that node.
+										<ul>Tree Data Structure – used when organizing emails under categories where the search folder is a node; subfolders can be children of that node.
 										<ul></ul>Graph Data Structure – is used if the emails can belong to multiple categories or labels (with edges representing connections between categories and emails).</ul>
 										
 										<li><b>Sending and receiving emails:</b></li>
-										<ul>Queue Data Structure – sending and receiving emails is handled by queues on the server side, where each email is processed In order it's received (FIFO)</ul>
+										<ul>Queue Data Structure – sending and receiving emails is handled by queues on the server side, where each email is processed In the order it's received (FIFO)</ul>
 
 										<p><b>Step 4: The Relationship Between Data Structures and Functionality</b></p>
-										</p>
-										<h4>Preformatted</h4>
-										<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-  print 'Iteration ' + i;
-  deck.shuffle();
-  i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+										</p>This is based on linking each operation to the appropriate data structure to show how that structure supports the operation efficiently e.g.
+											<li>If you think about how the inbox is used – it uses queues to ensure that the emails are displayed in the order they were received. This means we see the newest email first, while order emails are accessible but further down the queue.</li>
+											<li>The search functionality has a hash map and enables fast keyword lookup, allowing users to find emails by sender or subject quickly.</li>
+										
+										<p><b>Step 5: Data Structure learning</b></p>
+										<p>Finally, my conclusion based on Active Learning through Game Play in a Data Structures Course, Dicheva & Hodge (2018) is to aid problem-solving e.g.</p>
+										<li>Stacks – help us understand how a history of actions (such as undo/redo features) might be implemented in an email client</li>
+										<li>Queues and Trees - aids in visualising how emails are categorised and managed efficiently.</li>
+									
 									</section>
 
 									
