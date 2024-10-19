@@ -107,8 +107,8 @@ def test_wallet_spend_cash_raises_exception_on_insufficient_amount():
 																	 															
 
 										<br>
-										<h4>RESPONSE</h4>
-										<pre><code>#when the test passed
+										<h4>RESPONSE WHEN THE TEST PASSED</h4>
+										<pre><code>
 collecting ... collected 5 items
 											
 test_wallet.py::test_default_initial_amount PASSED                       [ 20%]
@@ -118,7 +118,98 @@ test_wallet.py::test_wallet_spend_cash PASSED                            [ 80%]
 test_wallet.py::test_wallet_spend_cash_raises_exception_on_insufficient_amount PASSED [100%]
 
 ============================== 5 passed in 0.03s ==============================
-											</code></pre>
+										<div class="col-6 col-12-medium">
+										<ul class="actions">
+										</ul>
+										<ul class="actions small">
+										<li><a href="#" class="button primary small">Back to top</a></li>
+										</div>	
+										</code></pre>
+										<h4>RESPONSE WHEN THE TEST FAILED</h4>
+										<pre><code>
+											============================= test session starts =============================
+collecting ... collected 5 items
+
+test_wallet.py::test_default_initial_amount FAILED                       [ 20%]
+test_wallet.py:5 (test_default_initial_amount)
+10 != 0
+
+Expected :0
+Actual   :10
+<Click to see difference>
+
+def test_default_initial_amount():
+        wallet = Wallet()
+>       assert wallet.balance == 0
+E       assert 10 == 0
+E        +  where 10 = <wallet.Wallet object at 0x000001AE14D41400>.balance
+
+test_wallet.py:8: AssertionError
+
+test_wallet.py::test_setting_initial_amount FAILED                       [ 40%]
+test_wallet.py:9 (test_setting_initial_amount)
+10 != 100
+
+Expected :100
+Actual   :10
+<Click to see difference>
+
+def test_setting_initial_amount():
+        wallet = Wallet(100)
+>       assert wallet.balance == 100
+E       assert 10 == 100
+E        +  where 10 = <wallet.Wallet object at 0x000001AE14CEE710>.balance
+
+test_wallet.py:12: AssertionError
+
+test_wallet.py::test_wallet_add_cash FAILED                              [ 60%]
+test_wallet.py:13 (test_wallet_add_cash)
+80 != 100
+
+Expected :100
+Actual   :80
+<Click to see difference>
+
+def test_wallet_add_cash():
+        wallet = Wallet(10)
+        wallet.add_cash(90)
+>       assert wallet.balance == 100
+E       assert 80 == 100
+E        +  where 80 = <wallet.Wallet object at 0x000001AE14CEF250>.balance
+
+test_wallet.py:17: AssertionError
+
+test_wallet.py::test_wallet_spend_cash FAILED                            [ 80%]
+test_wallet.py:18 (test_wallet_spend_cash)
+0 != 10
+
+Expected :10
+Actual   :0
+<Click to see difference>
+
+def test_wallet_spend_cash():
+        wallet = Wallet(20)
+        wallet.spend_cash(10)
+>       assert wallet.balance == 10
+E       assert 0 == 10
+E        +  where 0 = <wallet.Wallet object at 0x000001AE165682B0>.balance
+
+test_wallet.py:22: AssertionError
+
+test_wallet.py::test_wallet_spend_cash_raises_exception_on_insufficient_amount FAILED [100%]
+test_wallet.py:23 (test_wallet_spend_cash_raises_exception_on_insufficient_amount)
+def test_wallet_spend_cash_raises_exception_on_insufficient_amount():
+        wallet = Wallet()
+>       with pytest.raises(InsufficientAmount):
+E       Failed: DID NOT RAISE <class 'wallet.InsufficientAmount'>
+
+test_wallet.py:26: Failed
+
+
+============================== 5 failed in 0.09s ==============================
+									
+										</code></pre>
+										
 											
 
 										
