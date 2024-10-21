@@ -66,7 +66,7 @@
 										concurrency management, and secure data handling, making them optimal for handling both functional and non-functional requirements in a business 
 										setting like an e-commerce platform.</p>
 
-										<h4>Business Environment used - Online E-commerce Platform (not online IT-related magazine as suggested)</h4>
+										<h3>Business Environment used - Online E-commerce Platform (not online IT-related magazine as suggested)</h3>
 										<p><b>Functional Requirements</b></p>
 										<ol>
 										<li><b>User Authentication:</b> Users log into their accounts to make purchases, manage profiles, and track orders.</li>
@@ -74,22 +74,34 @@
 										<li><b>Order Processing:</b> Processes payments, calculates taxes/shipping, and generates order confirmations.</li>
 										<li><b>Error Logging:</b> Logs errors like failed payment transactions or system issues for troubleshooting.</li>
 										<li><b>File Uploads:</b> Vendors upload product images and related files.</li>
+										</ol>
+<pre><code>users = {
+    "john_doe@example.com": {"password": "hashed_pass", "role": "customer", "session_token": "xyz"},
+    "admin@example.com": {"password": "admin_hashed_pass", "role": "admin", "session_token": "abc"}
+}
+products = {
+    1001: {"name": "Laptop", "price": 1200.99, "stock": 50},
+    1002: {"name": "Smartphone", "price": 699.50, "stock": 200}
+}
+</code></pre>
 
-
-											
+										<p><b>Non-Functional Requirements:</b></p>
+										<ol>
+										<li><b>Performance:</b> Supports up to 50,000 concurrent users during peak times.</li>
+										<li><b>Security:</b> Ensures all sensitive data (user credentials, payment information) is encrypted.</li>
+										<li><b>Reliability:</b> Provides a 99.99% uptime guarantee.</li>
+										<li><b>Compliance:</b> Meets GDPR regulations, protecting users' personal data.</li>
 										</ol>
 										
-										
+<pre><code>
+# Tracking unique active user sessions
+active_sessions = {"session_token_1", "session_token_2", "session_token_3"}
+
+# Tracking encrypted data blocks
+encrypted_blocks = {"block1", "block2", "block3"}
+</code></pre>
 										<h4>Python Data Structures</h4>
-										<pre><code>i = 0;
-
-										while (!deck.isInOrder()) {
-			 							 print 'Iteration ' + i;
- 										 deck.shuffle();
- 									 i++;
-									}
-
-									print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+										
 									
 								</section>
 									<section>
