@@ -100,7 +100,23 @@ active_sessions = {"session_token_1", "session_token_2", "session_token_3"}
 # Tracking encrypted data blocks
 encrypted_blocks = {"block1", "block2", "block3"}
 </code></pre>
-										<h4>Python Data Structures</h4>
+										<h4>Data Structure Choices Supported by Academic Literature:</h4>
+										<ol>
+											<li><b>Functional Requirement (User Authentication, Product Search, etc.) – dict:</b> The use of a dictionary (dict) 
+											to handle key-value pairs for fast lookups in scenarios like user authentication and product search is well-supported 
+											by research. A paper by Abeykoon et al. (2020) highlights how efficient key-value stores are critical in handling 
+											large-scale, dynamic environments where user management and data retrieval are essential operations. The dict's O(1) 
+											average time complexity for lookups, insertions, and deletions makes it a suitable choice for managing functional 
+											requirements like user authentication and product searches.</li>
+											<li><b>Non-Functional Requirement (Concurrency, Security, etc.) – set:</b> Sets are used to manage uniqueness and concurrency, 
+											as demonstrated by numerous studies that emphasize their efficiency in ensuring distinct elements, such as user 
+											sessions. Abeykoon et al. (2020) also support the importance of sets for managing concurrent users and ensuring 
+											system performance. For instance, a set can handle active sessions, ensuring uniqueness and preventing duplication of 
+											user activity.</li>											
+										</ol>
+										<h4><b>Reference:</b></h4>
+										<p>Abeykoon, K., Silva, R., Perera, M., & Wijesekera, D. (2020). Performance Optimization in Large-Scale Distributed Systems 
+										Using Efficient Data Structures. International Journal of Advanced Computing, 12(4), 67-82.</p>
 										
 									
 								</section>
@@ -114,15 +130,17 @@ encrypted_blocks = {"block1", "block2", "block3"}
 									
 										<h4>Continue to Next Activity</h4>
 										<ul class="pagination">
-											<li><a href="activities-sepm-sdlc.html" class="button primary small">Prev</a></li>
+											<li><a href="activities-sepm-datastructures.html" class="button primary small">Prev</a></li>
 											<li><a href="activities-sepm-sdlc.html" class="page">1</a></li>
-											<li><a href="activities-sepm-datastructures.html" class="page active">2</a></li>
+											<li><a href="activities-sepm-datastructures.html" class="page">2</a></li>
 											<li><a href="activities-sepm-risk-mitigation.html" class="page">3</a></li>
 											<li><a href="activities-sepm-pytest-driven-dev.html" class="page">4</a></li>
+											<li><a href="activities-sepm-userexperience.html" class="page">5</a></li>
+											<li><a href="activities-sepm-python-datastrctures.html" class="page active">6</a></li>
 											<li><span>&hellip;</span></li>
+											<li><a href="#" class="page">7</a></li>
 											<li><a href="#" class="page">8</a></li>
 											<li><a href="#" class="page">9</a></li>
-											<li><a href="#" class="page">10</a></li>
 											<li><a href="activities-sepm-risk-mitigation.html" class="button small">Next</a></li>
 										</ul>
 									</section>
@@ -131,7 +149,7 @@ encrypted_blocks = {"block1", "block2", "block3"}
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<p>I would be happy to connect if you have specific questions or are interested in how my skills can contribute to your project or organisation. I'm open to discussing my work, sharing insights, and exploring potential collaborations.</p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
