@@ -80,7 +80,7 @@
 											<p><b>Kali Linux</b></p>
 											<p>Once I uploaded VirtualBox was able to perform the scan for my chosen site. https://34.246.169.176/ which resulted in the following feedback:</p>
 
-											<p><strong>st Scan (Ping Scan)</strong>1</p>
+											<p><strong>1st Scan (Ping Scan)</strong>1</p>
 											<ul>
 											<li>Command Used: nmap -sn 34.246.169.176</li>
 											<li>Objective: Determine if the host is up and measure inactivity.</li>
@@ -91,18 +91,75 @@
 												<li>Latency: 0.051 seconds.</li>
 												<li>Conclusion: The target host is responsive and online.</li>
 												</ol>
-											<p>2<strong>1nd Scan (SYN Scan)</strong>1</p>
+											<p>2<strong>2nd Scan (SYN Scan)</strong>1</p>
 												<ul>
 												<li>Command Used: nmap -PS 34.246.169.176</li>
 												<li>Objective: Check for open TCP ports.</li>
-												<li>Result:</li
+												<li>Result:</li>
 												</ul>
 													<ol>
 													<li>Host: ec2-34-246-169-176.eu-west-1.compute.amazonaws.com is up with 0.055 seconds latency.</li>
 													<li>Ports:</li>
-												</ol>	
-												
+													</ol>
+												<ul>
+													<li>80/tcp: Open (HTTP)</li>
+													<li>443/tcp: Open (HTTPS)</li>
+													<li>8080/tcp: Open (HTTP-Proxy)</li>
+													<li>8443/tcp: Open (HTTPS-Alt)</li>
+													<p>Other Ports: 996 TCP ports are filtered and not responding.</p>
+													<p>Conclusion: The host has several critical services running, specifically web-related services (HTTP, HTTPS, HTTP-Proxy), 
+													indicating it serves web content or has a web application interface.</p>
+												</ul>
+												<p>One of the critical lessons I have also learned from this module is the importance of preventing reoccurrences of issues related to 
+												encryption keys and encrypted databases. Encryption is a fundamental aspect of protecting sensitive data, but it is not foolproof 
+												if not managed correctly.</p>
+
+											<p><b>Frequent Password Changes</b></p>
+											<p>Another key insight is the necessity of enforcing frequent password changes within to organisations stakeholders. Passwords are the first line 
+											of defence against unauthorised access, and static passwords become vulnerable over time. Implementing a policy that requires employees to 
+											update their passwords regularly can significantly reduce the risk of password-related breaches (NIST, 2020). Furthermore, educating employees 
+											about creating strong, complex passwords and the dangers of password reuse is crucial in strengthening overall security posture.</p>
+
+											<p><b>Enhanced Monitoring Tools and Intrusion Prevention Systems (IPS)</b></p>
+											<p>My analysis also highlighted the need for better monitoring tools and the integration of advanced Intrusion Prevention Systems (IPS). Effective 
+											monitoring tools can provide real-time alerts and detailed logs, allowing for the quick detection and response to potential security incidents. 
+											Implementing an IPS can further enhance security by proactively identifying and blocking suspicious activities before they can cause harm 
+											(Andress and Winterfeld, 2013). These systems are vital for maintaining the integrity of the network and ensuring continuous protection against 
+											evolving threats.</p>
+
+											<p><b>Defence Tools like Microsoft Defender for Backend SQL Databases</b></p>
+											<p>Utilising defence tools such as Microsoft Defender for backend SQL databases is another critical strategy that emerged from my assessment. These 
+											tools offer advanced threat protection by continuously monitoring and analysing database activities for signs of malicious behaviour. By 
+											leveraging such technologies, organizations can ensure that their databases are safeguarded against unauthorised access and data breaches, 
+											providing an additional layer of security (Leroux, 2020).</p>
+
+											<p><b>Assessing Organizational and Website Weaknesses</b></p>
+
+											<p>A comprehensive understanding of an organization's or website's weaknesses is understanding the fundamentals of network security, the importance 
+											of regularly checking for open ports and missing configurations, which can sometimes be easy entry points for attackers.</p>
+
+											<p><b>Firewall Implementation</b></p>
+											<p>Ensuring a robust security system is in place is another critical aspect of network security. Firewalls serve as a barrier between internal networks 
+											and external threats, filtering out malicious traffic and preventing unauthorised access. My reflection on this part analysis stresses the importance 
+											of configuring and maintaining firewalls properly for effective protection (NIST, 2020).</p>
+
+											<p>Through this network security assessment analysis, I have gained valuable insights into the multifaceted approach required to protect an organization’s network. 
+											This module has now deepened my understanding of the importance of continuous monitoring, regular updates, and comprehensive network security strategies to 
+											safeguard against evolving cyber threats (ISO/IEC, 2018).</p>
+
+											<p>References:</p>
+											<ul>
+												<li>Andress, J. and Winterfeld, S., 2013. Cyber Warfare: Techniques, Tactics and Tools for Security Practitioners. Elsevier.</li>
+												<li>ISO/IEC, 2018. ISO/IEC 27000:2018 Information technology — Security techniques — Information security management systems — Overview and vocabulary. ISO/IEC.</li>
+												<li>Leroux, P., 2020. 'Kali Linux Review'. Linux Journal, [online] Available at: https://www.linuxjournal.com/content/kali-linux-review [Accessed 20 July 2024].</li>
+												<li>NIST, 2020. Framework for Improving Critical Infrastructure Cybersecurity, Version 1.1. National Institute of Standards and Technology.</li>												
 											</ul>
+											
+
+											
+										
+												
+											
 
 
 										
