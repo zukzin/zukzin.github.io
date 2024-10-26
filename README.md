@@ -1,7 +1,7 @@
 I have not included the read me file. I'm still working on completing this part
 
-AJ
-aj@lkn.io | @ajlkn
+zukituso
+zukzin@github.io | @zukituso
 
 
 Credits:
