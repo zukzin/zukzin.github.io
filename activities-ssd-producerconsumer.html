@@ -66,6 +66,7 @@
 										<li>Producer shouldn’t ‘overwrite’ an item in the buffer</li>
 										<br>
 										<a href="https://pages.mtu.edu/~shene/NSF-3/e-Book/SEMA/TM-example-buffer.html"><img src="images/The Producer-Consumer Mechanism.jpg" alt="/></a>
+										<br>											
 										<p><a href="https://pages.mtu.edu/~shene/NSF-3/e-Book/SEMA/TM-example-buffer.html">The Producer/Consumer (or Bounded-Buffer) Problem</a>.</p>
 										
 										<p>Synchronisation is necessary because:</p>
@@ -76,7 +77,7 @@
 										<p><b>Task</b></p>
 										<p>Run producer-consumer.py in your chosen Jupyter Notebook workspace (Producer-Consumer Mechanism), where the queue data structure is used. You can also download the 'producer-consumer-mechanism' zip file.</p>
 
-<code>#code source: https://techmonger.github.io/55/producer-consumer-python/
+										<pre><code>#code source: https://techmonger.github.io/55/producer-consumer-python/
  
 from threading import Thread
 from queue import Queue
@@ -107,7 +108,7 @@ producer()
 q.join()
  
 print (final_results)
-</code>
+</code></pre>
 
 <p>Answer the following questions:</p>
 <ul>
@@ -121,15 +122,15 @@ print (final_results)
 																	
 													       
 										
-										<p><b>RESPONSE:How is the queue data structure used to achieve the purpose of the code?</b></p>
+										<p><b>RESPONSE:</b>How is the queue data structure used to achieve the purpose of the code?</p>
 										<br>
-										<p><b>RESPONSE: What is the purpose of q.put(I)?</b></p>
+										<p><b>RESPONSE:</b> What is the purpose of q.put(I)?</p>
 										<br>
-										<p><b>RESPONSE: What is achieved by q.get()?</b></p>
+										<p><b>RESPONSE:</b> What is achieved by q.get()?</p>
 										<br>
-										<p><b>RESPONSE: What functionality is provided by q.join()?</b></p>
+										<p><b>RESPONSE:</b> What functionality is provided by q.join()?</p>
 										<br>
-										<p><b>RESPONSE: What technique(s) would be appropriate to apply?</b></p>
+										<p><b>RESPONSE:</b> What technique(s) would be appropriate to apply?</p>
 										<br>
 
 										<section>
