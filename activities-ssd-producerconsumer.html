@@ -64,82 +64,107 @@
 										<p>Items are placed in a buffer when produced, so:</p>
 										<li>Consumer should wait if there isn’t an item to consume.</li>
 										<li>Producer shouldn’t ‘overwrite’ an item in the buffer</li>
-										<p><span class="image"></span>
+										<br>
 										<a href="https://pages.mtu.edu/~shene/NSF-3/e-Book/SEMA/TM-example-buffer.html"><img src="images/The Producer-Consumer Mechanism.jpg" alt="/></a>
+										<p><a href="https://pages.mtu.edu/~shene/NSF-3/e-Book/SEMA/TM-example-buffer.html">The Producer/Consumer (or Bounded-Buffer) Problem</a>.</p>
+										
 										<p>Synchronisation is necessary because:</p>
+										<ul>
 										<li>If the consumer has not taken out the current value in the buffer, then the producer should not replace it with another.</li>
 										<li>Similarly, the consumer should not consume the same value twice.</li>
-																					
+										</ul>
+										<p><b>Task</b></p>
+										<p>Run producer-consumer.py in your chosen Jupyter Notebook workspace (Producer-Consumer Mechanism), where the queue data structure is used. You can also download the 'producer-consumer-mechanism' zip file.</p>
+
+<code>#code source: https://techmonger.github.io/55/producer-consumer-python/
+ 
+from threading import Thread
+from queue import Queue
+ 
+q = Queue()
+final_results = []
+ 
+def producer():
+    for i in range(100):
+        q.put(i)
+        
+ 
+def consumer():
+    while True:
+        number = q.get()
+        result = (number, number**2)
+        final_results.append(result)
+        q.task_done()
+   
+   
+for i in range(5):
+    t = Thread(target=consumer)
+    t.daemon = True
+    t.start()
+    
+producer()
+ 
+q.join()
+ 
+print (final_results)
+</code>
+
+<p>Answer the following questions:</p>
+<ul>
+<li>How is the queue data structure used to achieve the purpose of the code?</li>
+<li>What is the purpose of q.put(I)?</li>
+<li>What is achieved by q.get()?</li>
+<li>What functionality is provided by q.join()?</li>
+<li>Extend this producer-consumer code to make the producer-consumer scenario available in a secure way. What technique(s) would be appropriate to apply?</li>
+</ul>
+										
 																	
 													       
 										
-										<p><b>RESPONSE: MAIN RISKS THAT THE AUTHORS IDENTIFY</b></p>
-										<p><b>Verner et al. (2014)</b> identifies risks in Global Software Development (GSD), focusing on communication 
-										issues, time zone differences, and cultural misunderstandings. These risks are categorised into four areas: 
-										<li>project management</li> 
-										<li>software development</li>
-										<li>human resources</li>
-										<li>outsourcing rationale</li>
+										<p><b>RESPONSE:How is the queue data structure used to achieve the purpose of the code?</b></p>
 										<br>
-										The biggest risks stem from project management challenges, including coordination difficulties due to 
-										geographic and temporal separation of teams. Communication breakdowns are exacerbated by cultural 
-										and language barriers, leading to delayed project timelines and misaligned expectations.</p>
-										<p><b>Anton & Nucu (2020)</b> focus on Enterprise Risk Management (ERM) and identify risks related to strategic 
-										misalignment, financial distress, and operational inefficiencies. They highlight risks associated with 
-										regulatory compliance and suggest that ERM's effectiveness depends on proactive identification and 
-										management of these risks.</p>
-
-										<p><b>RESPONSE: FITTING RISKS INTO THE TRADITIONAL SDLC MODEL</b></p>
-										<p>In the traditional Software Development Life Cycle (SDLC), the identified risks can be mapped across different phases:</p>
-										<li>Planning & Requirements Gathering: Risks in early planning stages - unclear project scope (GSD) and strategic misalignment (ERM).</li>
-										<li>Design & Development: Poor communication and coordination, hindering design and development efforts, causing delays and errors.</li>
-										<li>Testing: Misunderstandings due to cultural and language differences could lead to incomplete or incorrect test cases in GSD.</li>
-										<li>Deployment & Maintenance: Operational risks, in ERM context, affect the long-term sustainability and maintenance of the system.</li>
+										<p><b>RESPONSE: What is the purpose of q.put(I)?</b></p>
+										<br>
+										<p><b>RESPONSE: What is achieved by q.get()?</b></p>
+										<br>
+										<p><b>RESPONSE: What functionality is provided by q.join()?</b></p>
+										<br>
+										<p><b>RESPONSE: What technique(s) would be appropriate to apply?</b></p>
 										<br>
 
-										<p><b>RESPONSE: FRAMEWORKS FOR RISK CAPTURE AND CATEGORIZATION</b></p>
-										<p>Frameworks like COCOMO and Critical Chain Project Management (CCPM) can be useful in capturing and categorizing risks in both software 
-										development and enterprise-wide contexts. Additionally, the Risk Management Process (RMP) from the lecture offers a structured approach to 
-										handling risks through identification, analysis, evaluation, and treatment.The PDCA (Plan-Do-Check-Act) cycle, mentioned in the lecture, 
-										fits well into both GSD and ERM contexts for continuous risk monitoring and mitigation.</p>
+										<section>
+												
+										<div class="col-6 col-12-medium">
+										<ul class="actions">
+										</ul>
+										<ul class="actions small">
+										<li><a href="#" class="button primary small">Back to top</a></li>
+											</div>
 										
-										<p><b>RESPONSE: RISK FOR THE WIKI AND SUGGESTED MITIGATION</b></p>
-										<li>Risk: Time zone differences in GSD leading to communication delays.</li>
-										<li>Mitigation: Implementing asynchronous communication tools (Slack, Trello) to allow teams to stay updated.</li>
-										<li>Establishing a rotating schedule for synchronous meetings can also help align team members across different 
-										time zones</li>																
-
-										<br>
-
-												<section>
-										<div>
 										<h4>Continue to Next Activity</h4>
 										<ul class="pagination">
-											<li><a href="activities-sepm-datastructures.html" class="button primary small">Prev</a></li>
-											<li><a href="activities-sepm-sdlc.html" class="page">1</a></li>
-											<li><a href="activities-sepm-datastructures.html" class="page">2</a></li>
-											<li><a href="activities-sepm-risk-mitigation.html" class="page active">3</a></li>
-											<li><span>&hellip;</span></li>
+											<li><a href="activities-ssd-pythontools.html" class="button primary small">Prev</a></li>
+											<li><a href="activities-ssd-umlflowchart.html" class="page active">1</a></li>
+											<li><a href="activities-ssd-teamdiscussion.html" class="page">2</a></li>
+											<li><a href="activities-ssd-pythontools.html" class="page">3</a></li>
+											<li><a href="activities-ssd-producerconsumer.html" class="page active">4</a></li>
+											<li><a href="#" class="page">5</a></li>
+											<li><a href="#" class="page">6</a></li>
+											<li><a href="#" class="page">7</a></li>
 											<li><a href="#" class="page">8</a></li>
 											<li><a href="#" class="page">9</a></li>
 											<li><a href="#" class="page">10</a></li>
-											<li><a href="activities-sepm-risk-mitigation.html" class="button small">Next</a></li>
+											<li><a href="#" class="button small">Next</a></li>
 										</ul>
-																							
-										</ul>
-										</div>
-										</section>
-
-										</div>
-							</div>
-
-					</section>
-
+												
+										
+									</section>		
+										
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<p>I would be happy to connect if you have specific questions or are interested in how my skills can contribute to your project or organisation. I'm open to discussing my work, sharing insights, and exploring potential collaborations.</p>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -160,19 +185,14 @@
 								</ul>
 							</form>
 							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+								<li class="icon solid fa-phone">(0044) 7947-968547</li>
+								<li class="icon solid fa-envelope"><a href="mailto:zukituso@yahoo.co.uk">email: zukituso@yahoo.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/zukituso">linkedin: zukituso</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/zukzin">github: zukzin</a></li>
+								<li class="icon brands fa-twitter"><a href="https://twitter.com/Zuki32508">twitter: Zuki32508</a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Zukiswa Tuso. All rights reserved</li>
 							</ul>
 						</div>
 					</section>
