@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>ePortfolio - Formative Activities</title>
+		<title>ePortfolio - SSD Formative Activities</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,7 +14,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="SEPM.html">Back to SEPM</a></h1>
+						<h1><a href="secure-software-development.html">Back to SSD</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -30,11 +25,14 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+							<li><a href="index.html">Home</a></li>
+								<li><a href="launching.html">Computer Science</a></li>
+								<li><a href="object-oriented.html">Object Oriented</a></li>
+								<li><a href="network-security.html">Network Security</a></li>
+								<li><a href="information-security.html">Information Security</a></li>
+								<li><a href="SEPM.html">SEPM</a></li>
+								<li><a href="secure-software-developments.html">SSD</a></li>
+								<li><a href="research-methods.html">Research Methods</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -44,8 +42,8 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Formative Activities: Unit 4 </h2>
-								<p>This is unit 4 formative activity. The topic here is risks and risk mitigation formative activity.</p>
+								<h2>Formative Activities: Unit 3 Conti</h2>
+								<p>This is unit 3 formative activity continuation part 2 activity. The topic here is about the Producer-Consumer Mechanism</p>
 							</div>
 						</header>
 
@@ -54,15 +52,27 @@
 								<div class="inner">
 
 									<section>
-										<h3 class="major">Unit 4: Risks and risk mitigation</h3>
+										<h3 class="major">Unit 3: The Producer-Consumer Mechanism</h3>
 										
-										 <p>Read the articles by <b>Verner et al (2014) </b> and <b>Anton & Nucu (2020)</b> and then answer the following questions:</p>
-										<ol>
-										<li>What are the main risks that the authors identify? How do these fit into the traditional SDLC model?</li>
-										<li>Which of the frameworks discussed in the Unit 3 lecturecast would you use to capture and categorise the risks?</li>
-										<li>Add a risk and a suggested mitigation to the module wiki.</li>
-										<li>Choose an entry made by one of your colleagues in the wiki and comment on how you might mitigate it.</li>
-										</ol>
+										<p>Producer/Consumer Problem (also known as the ‘bounded buffer’ problem):</p>
+									
+										<li>A ‘producer’ is producing items at a particular (unknown and sometimes unpredictable) rate.</li>
+										<li>A ‘consumer’ is consuming the items – again, at some rate.</li>
+										<p>For example, a producer-consumer scenario models an application producing a listing that must be consumed by a printer process, 
+										as well as a keyboard handler producing a line of data that will be consumed by an application program. This is shown in the picture 
+										below (Shene, 2014).</p>
+										<p>Items are placed in a buffer when produced, so:</p>
+										<li>Consumer should wait if there isn’t an item to consume.</li>
+										<li>Producer shouldn’t ‘overwrite’ an item in the buffer</li>
+										<p><span class="image"></span>
+										<a href="https://pages.mtu.edu/~shene/NSF-3/e-Book/SEMA/TM-example-buffer.html"><img src="images/The Producer-Consumer Mechanism.jpg" alt="/></a>
+										<p>Synchronisation is necessary because:</p>
+										<li>If the consumer has not taken out the current value in the buffer, then the producer should not replace it with another.</li>
+										<li>Similarly, the consumer should not consume the same value twice.</li>
+																					
+																	
+													       
+										
 										<p><b>RESPONSE: MAIN RISKS THAT THE AUTHORS IDENTIFY</b></p>
 										<p><b>Verner et al. (2014)</b> identifies risks in Global Software Development (GSD), focusing on communication 
 										issues, time zone differences, and cultural misunderstandings. These risks are categorised into four areas: 
