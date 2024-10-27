@@ -1,12 +1,8 @@
 <!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title>ePortfolio - Formative Activities</title>
+		<title>ePortfolio - SSD Formative Activities</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,7 +15,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="SEPM.html">Back to SEPM</a></h1>
+						<h1><a href="secure-software-development.html">Back to SSD</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -30,11 +26,14 @@
 						<div class="inner">
 							<h2>Menu</h2>
 							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+							<li><a href="index.html">Home</a></li>
+								<li><a href="launching.html">Computer Science</a></li>
+								<li><a href="object-oriented.html">Object Oriented</a></li>
+								<li><a href="network-security.html">Network Security</a></li>
+								<li><a href="information-security.html">Information Security</a></li>
+								<li><a href="SEPM.html">SEPM</a></li>
+								<li><a href="secure-software-developments.html">SSD</a></li>
+								<li><a href="research-methods.html">Research Methods</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -44,8 +43,8 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Formative Activities: Unit 4 </h2>
-								<p>This is unit 4 formative activity. The topic here is risks and risk mitigation formative activity.</p>
+								<h2>Formative Activities: Unit 3 Conti</h2>
+								<p>This is unit 3 formative activity continuation. The activity here is based on Exploring Python tools and features.</p>
 							</div>
 						</header>
 
@@ -54,76 +53,89 @@
 								<div class="inner">
 
 									<section>
-										<h3 class="major">Unit 4: Risks and risk mitigation</h3>
+										<h3 class="major">Unit 3: Exploring Python tools and features</h3>
 										
-										 <p>Read the articles by <b>Verner et al (2014) </b> and <b>Anton & Nucu (2020)</b> and then answer the following questions:</p>
-										<ol>
-										<li>What are the main risks that the authors identify? How do these fit into the traditional SDLC model?</li>
-										<li>Which of the frameworks discussed in the Unit 3 lecturecast would you use to capture and categorise the risks?</li>
-										<li>Add a risk and a suggested mitigation to the module wiki.</li>
-										<li>Choose an entry made by one of your colleagues in the wiki and comment on how you might mitigate it.</li>
-										</ol>
-										<p><b>RESPONSE: MAIN RISKS THAT THE AUTHORS IDENTIFY</b></p>
-										<p><b>Verner et al. (2014)</b> identifies risks in Global Software Development (GSD), focusing on communication 
-										issues, time zone differences, and cultural misunderstandings. These risks are categorised into four areas: 
-										<li>project management</li> 
-										<li>software development</li>
-										<li>human resources</li>
-										<li>outsourcing rationale</li>
-										<br>
-										The biggest risks stem from project management challenges, including coordination difficulties due to 
-										geographic and temporal separation of teams. Communication breakdowns are exacerbated by cultural 
-										and language barriers, leading to delayed project timelines and misaligned expectations.</p>
-										<p><b>Anton & Nucu (2020)</b> focus on Enterprise Risk Management (ERM) and identify risks related to strategic 
-										misalignment, financial distress, and operational inefficiencies. They highlight risks associated with 
-										regulatory compliance and suggest that ERM's effectiveness depends on proactive identification and 
-										management of these risks.</p>
-
-										<p><b>RESPONSE: FITTING RISKS INTO THE TRADITIONAL SDLC MODEL</b></p>
-										<p>In the traditional Software Development Life Cycle (SDLC), the identified risks can be mapped across different phases:</p>
-										<li>Planning & Requirements Gathering: Risks in early planning stages - unclear project scope (GSD) and strategic misalignment (ERM).</li>
-										<li>Design & Development: Poor communication and coordination, hindering design and development efforts, causing delays and errors.</li>
-										<li>Testing: Misunderstandings due to cultural and language differences could lead to incomplete or incorrect test cases in GSD.</li>
-										<li>Deployment & Maintenance: Operational risks, in ERM context, affect the long-term sustainability and maintenance of the system.</li>
-										<br>
-
-										<p><b>RESPONSE: FRAMEWORKS FOR RISK CAPTURE AND CATEGORIZATION</b></p>
-										<p>Frameworks like COCOMO and Critical Chain Project Management (CCPM) can be useful in capturing and categorizing risks in both software 
-										development and enterprise-wide contexts. Additionally, the Risk Management Process (RMP) from the lecture offers a structured approach to 
-										handling risks through identification, analysis, evaluation, and treatment.The PDCA (Plan-Do-Check-Act) cycle, mentioned in the lecture, 
-										fits well into both GSD and ERM contexts for continuous risk monitoring and mitigation.</p>
+										 <p><b>Part I</b></p>
+										<p>In this example, you will compile and run a program in C using the Jupyter notebook workspace provided (Buffer Overflow in C). 
+										The program is already provided as bufoverflow.c - a simple program that creates a buffer and then asks you for a name, and prints it 
+										back out to the screen.</p>
+										<p>In this example, you will compile and run a program in C using the Jupyter notebook workspace provided (Buffer Overflow in C). 
+										The program is already provided as bufoverflow.c - a simple program that creates a buffer and then asks you for a name, and prints it back out to the screen.</p>
+										<code>#include <stdio.h> 
+int main(int argc, char **argv)
+{
+char buf[8]; // buffer for eight characters
+printf("enter name:"); 
+gets(buf); // read from stdio (sensitive function!)
+printf("%s\n", buf); // print out data stored in buf
+return 0; // 0 as return value
+{</code>
+										<p>Now compile and run the code. To test it, enter your first name (or at least the first 8 characters of it) you should get the output which is just your name repeated back to you.</p>
+										<p>Run the code a second time (from the command window this can be achieved by entering ./bufoverflow on the command line). This time, enter a string of 10 or more characters.</p>
+										<ul>
+										<li>What happens?</li>
+										<li>What does the output message mean?</li>
+										</ul>
 										
-										<p><b>RESPONSE: RISK FOR THE WIKI AND SUGGESTED MITIGATION</b></p>
-										<li>Risk: Time zone differences in GSD leading to communication delays.</li>
-										<li>Mitigation: Implementing asynchronous communication tools (Slack, Trello) to allow teams to stay updated.</li>
-										<li>Establishing a rotating schedule for synchronous meetings can also help align team members across different 
-										time zones</li>																
-
+										<p><b>Part II</b></p>
+										<p>Now carry out a comparison of this code with one in Python (Buffer Overflow in Python), following these instructions:</p>
+										<p>In your workspace, you will be using the file called Overflow.py. You are able to download the zip file 'buffer-overflow-in-python' along with additional instructions 
+										in the PDF 'Exploring Python Tools and Features'.</p>
+										<code>buffer=[None]*10
+for i in range (0,11):
+    buffer[i]=7
+print(buffer)</code>
+										<ul>
+										<li>Run your code using: Python overflow.py (or use the codio rocket icon)</li>
+											<li>What is the result?</li>
+											<li>Read about Pylint at http://pylint.pycqa.org/en/latest/tutorial.html</li>
+											<li>Install pylint using the following commands:</li>
+											<code>pip install pylint (in the command shell/ interpreter)</code>
+											<li>Run pylint on one of your files and evaluate the output:</li>
+											<code>pylint your_file</code>
+											<li>(Make sure you are in the directory where your file is located before running Pylint)</li>
+											<li>What is the result? Does this tell you how to fix the error above?</li>
+											<p>Be prepared to discuss your thoughts on both exercises at next week’s seminar. Remember to record this into your e-portfolio.</p>
+												
+										</ul>
 										<br>
 
-												<section>
-										<div>
+										<p><b>RESPONSE: PART I</b></p>
+										<p>Response is here.</p>
+										
+										<p><b>RESPONSE: II</b></p>
+										<p>Response is here</p>															
+										<br>
+
+										<section>
+												
+											<div class="col-6 col-12-medium">
+										<ul class="actions">
+										</ul>
+										<ul class="actions small">
+										<li><a href="#" class="button primary small">Back to top</a></li>
+											</div>
+										
 										<h4>Continue to Next Activity</h4>
 										<ul class="pagination">
-											<li><a href="activities-sepm-datastructures.html" class="button primary small">Prev</a></li>
-											<li><a href="activities-sepm-sdlc.html" class="page">1</a></li>
-											<li><a href="activities-sepm-datastructures.html" class="page">2</a></li>
-											<li><a href="activities-sepm-risk-mitigation.html" class="page active">3</a></li>
-											<li><span>&hellip;</span></li>
+											<li><a href="activities-ssd-teamdiscussion.html" class="button primary small">Prev</a></li>
+											<li><a href="activities-ssd-umlflowchart.html" class="page">1</a></li>
+											<li><a href="activities-ssd-teamdiscussion.html" class="page">2</a></li>
+											<li><a href="activities-ssd-pythontools.html" class="page active">3</a></li>
+											<li><a href="#" class="page">4</a></li>
+											<li><a href="#" class="page">5</a></li>
+											<li><a href="#" class="page">6</a></li>
+											<li><a href="#" class="page">7</a></li>
 											<li><a href="#" class="page">8</a></li>
 											<li><a href="#" class="page">9</a></li>
 											<li><a href="#" class="page">10</a></li>
-											<li><a href="activities-sepm-risk-mitigation.html" class="button small">Next</a></li>
+											<li><a href="#" class="button small">Next</a></li>
 										</ul>
+												
+										
+									</section>			
 																							
-										</ul>
-										</div>
-										</section>
-
-										</div>
-							</div>
-
-					</section>
+									
 
 				<!-- Footer -->
 					<section id="footer">
@@ -150,19 +162,14 @@
 								</ul>
 							</form>
 							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+								<li class="icon solid fa-phone">(0044) 7947-968547</li>
+								<li class="icon solid fa-envelope"><a href="mailto:zukituso@yahoo.co.uk">email: zukituso@yahoo.co.uk</a></li>
+								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/zukituso">linkedin: zukituso</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/zukzin">github: zukzin</a></li>
+								<li class="icon brands fa-twitter"><a href="https://twitter.com/Zuki32508">twitter: Zuki32508</a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Zukiswa Tuso. All rights reserved</li>
 							</ul>
 						</div>
 					</section>
