@@ -53,17 +53,44 @@
 									<section>
 										<h3 class="major">Unit 3: Team Discussion: What is a Secure Programming Language?</h3>
 										
-										 <p>You should read Chapter 2,6,7,8 of the course text (Pillai, 2017) and Cifuentes & Bierman (2019) and then answer the questions below, adding them as evidence to your e-portfolio.</p>
+										 <p>You should read Chapters 2,6,7,8 of the course text (Pillai, 2017) and Cifuentes & Bierman (2019) and then answer the questions below, adding them as evidence to your e-portfolio.</p>
 										<ol>
 										<li>What factors determine whether a programming language is secure or not?</li>
 										<li>Could Python be classed as a secure language? Justify your answer.</li>
 										<li>Python would be a better language to create operating systems than C. Discuss.</li>
 										</ol>
 										<p><b>Team component</b></p>
-										<p>You should discuss your answers within your team, and you can share your team responses with the tutor for formative feedback or discuss it in next week’s seminar.</p> 
-																				
-										<p><b>Results, ideas and team discussions</b></p>
-										<p>This is where the information will be placed</p>
+											<p>To address the question regarding factors that determine the security of a programming language, we must examine several key considerations: memory safety, input validation, and control over 
+											data integrity, availability, and confidentiality. Languages that lack intrinsic support for these controls expose programs to vulnerabilities such as buffer overflows, injection attacks, 
+											and unauthorized data access (Cifuentes & Bierman, 2019). Security-conscious programming languages often integrate features designed to prevent common vulnerabilities by enforcing memory 
+											boundaries and including strong type systems that reduce coding errors susceptible to exploitation. The most secure languages provide mechanisms like input sanitization, secure data handling 
+											practices, and intrinsic memory protection, which collectively limit attack vectors like buffer overflows and injection attacks (Cifuentes & Bierman, 2019)​.</p>
+
+											<p>Python’s design contributes significantly to writing secure applications. Its strong memory management system prevents direct memory access, thus mitigating risks associated with buffer overflow 
+											errors commonly found in languages like C and C++ (Pillai, 2017). Moreover, Python’s robust standard library includes modules that enable secure handling of web input, cryptographic operations, 
+											and input validation, enhancing its security in web applications and data-driven environments (Pillai, 2017)​(AnandBalachandr_2017_Ch…). Nevertheless, Python is not entirely without risks; for 
+											instance, insecure practices such as evaluating arbitrary input or poor exception handling can open up vulnerabilities if not managed carefully (Pillai, 2017).</p>
+
+											<p>In contrast, C, due to its low-level operations and direct memory manipulation capabilities, has fewer intrinsic safeguards against memory-related vulnerabilities, which makes it more prone to buffer 
+											overflows and memory allocation errors. However, C is often preferred for system-level programming due to its control over hardware resources and high performance. From a security standpoint, 
+											while C offers flexibility, this comes at the cost of increased responsibility on the developer to mitigate security risks through rigorous testing and external security controls 
+											(Cifuentes & Bierman, 2019)​.</p>
+
+											<p>The question of whether Python is better suited than C for creating operating systems involves several considerations. C provides high-performance execution and efficient memory management—critical 
+											factors in OS development—qualities where Python is generally less efficient due to its interpreted nature and garbage collection overhead. Operating systems require low-latency operations and 
+											precise resource control, areas where Python’s higher-level abstractions and slower execution can be a drawback (Pillai, 2017). While Python is beneficial for rapid prototyping, its lack of 
+											native support for low-level memory and process control makes it less suitable for full-scale OS development (Pillai, 2017)​.</p>
+
+											<p>In summary, while Python is a relatively secure language with features that protect against certain vulnerabilities, its suitability as an OS development language is limited by performance constraints. 
+											C, although less inherently secure, remains preferred for system programming due to its control and efficiency.</p>
+
+											<p><b>References:</b></p>
+											<p>Cifuentes, C., & Bierman, G. (2019). What is a Secure Programming Language? 3rd Summit on Advances in Programming Languages (SNAPL 2019). Leibniz International Proceedings in Informatics (LIPIcs), 
+											Vol. 136. Available at: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SNAPL.2019.3 (Accessed: 14 November 2024).</p>
+
+											<p>Pillai, A.B. (2017). Software Architecture with Python: Architect and Design Highly Scalable, Robust, Clean, and Highly Performant Applications in Python. Packt Publishing.</p>
+										
+										
 										
 
 									
