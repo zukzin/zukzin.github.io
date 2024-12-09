@@ -74,7 +74,9 @@ return 0; // 0 as return value
 										<p>Run the code a second time (from the command window this can be achieved by entering ./bufoverflow on the command line). This time, enter a string of 10 or more characters.</p>
 										<ul>
 										<li><b>What happens?</b></li>
-										<p>My name is repeated back to me, my name has 7 characters, and it was printed correctly. However, when I entered with characters more than 10, the programme failed and I received the following message. </p>
+										<p>My name is repeated back to me, has 7 characters and was printed correctly. It also means that the <code>gets</code> function does not check for buffer boundaries, causing a<b> buffer overflow</b> when 
+										the input exceeds the 8-character limit. However, when I entered with characters more than 10, the programme failed. The programme writes data beyond the allocated buffer memory <code>(buf[8])</code>, which 
+										can corrupt adjacent memory and cause a segmentation fault, which happened in this case as I received the following message. </p>
 										<a href="#" class="image"><img src="images/bufoverflow.c.png" alt="" /></a>
 										<br>
 											
