@@ -110,9 +110,15 @@ IndexError: list assignment index out of range
 											<li>Run pylint on one of your files and evaluate the output:</li>
 <pre><code>pylint your_file</code></pre>
 											<li>(Make sure you are in the directory where your file is located before running Pylint)</li>
-											<li>What is the result? Does this tell you how to fix the error above?</li>
-											<p>Be prepared to discuss your thoughts on both exercises at next week’s seminar. Remember to record this into your e-portfolio.</p>
-												
+											<li>What is the result?</li>
+<pre><code>************* Module Overflow
+overflow.py:4:0: C0303: Trailing whitespace (trailing-whitespace)
+overflow.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+overflow.py:1:0: C0103: Module name "Overflow" doesn't conform to snake_case naming style (invalid-name)
+</code></pre>
+											<li>Does this tell you how to fix the error above?</li>
+											<p>Yes, I managed to fix C0303 by removing the whitespace, and C0114 by including a docstring to describe the purpose of the module, and lastly, 
+											I renamed the file according to Snake Case (C0103) instead of PacalCase which requires lowercase with underscores when required by snake_case naming convention.</p>
 										</ul>
 										<br>
 										<section>
