@@ -130,6 +130,12 @@ print (final_results)
 	program does not terminate prematurely before consumer threads consume and process all the produced items.</p>
 	
 <li>Extend this producer-consumer code to make the producer-consumer scenario available in a secure way. What technique(s) would be appropriate to apply?</li>
+	
+	<li>Thread Locks (Mutex): Use <code>threading.Lock()</code> to prevent multiple threads from simultaneously modifying shared data structures, such as <code>final_results</code>, ensuring thread-safe operations.</li>
+
+	<li>Condition Variables: Use <code>threading.Condition()</code> to signal and wait between producer and consumer threads for better synchronization, especially if more advanced conditions need to be met.</li>
+
+	<li>Bounded Queue: Limit the size of the queue to prevent excessive memory usage by using <code>Queue(maxsize=n)</code>, where <code>n</code> is the buffer size.</li>
 </ul>
 										
 																	
