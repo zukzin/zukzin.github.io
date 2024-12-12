@@ -129,7 +129,7 @@ print (final_results)
 	<p>The <code>q.join()</code> function blocks the main thread until all items in the queue have been processed (i.e., both added and removed). It ensures that the 
 	program does not terminate prematurely before consumer threads consume and process all the produced items.</p>
 	
-<li>Extend this producer-consumer code to make the producer-consumer scenario available in a secure way. What technique(s) would be appropriate to apply?</li>
+<p>Extend this producer-consumer code to make the producer-consumer scenario available in a secure way. What technique(s) would be appropriate to apply?</p>
 	
 	<li>Thread Locks (Mutex): Use <code>threading.Lock()</code> to prevent multiple threads from simultaneously modifying shared data structures, such as <code>final_results</code>, ensuring thread-safe operations.</li>
 
