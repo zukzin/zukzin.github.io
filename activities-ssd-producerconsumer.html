@@ -112,28 +112,30 @@ print (final_results)
 
 <p>Answer the following questions:</p>
 <ul>
-<li>How is the queue data structure used to achieve the purpose of the code?</li>
-<li>What is the purpose of q.put(I)?</li>
-<li>What is achieved by q.get()?</li>
+        <li>How is the queue data structure used to achieve the purpose of the code?</li>
+	<p>The <code>Queue</code> data structure is used as a thread-safe mechanism to facilitate communication between the producer and consumer threads. 
+	It ensures synchronized access so that items produced by the producer are correctly passed to the consumer without data corruption or race conditions. 
+	The queue acts as a bounded buffer that holds items temporarily until they are consumed, adhering to the principles of the producer-consumer problem </p>
+
+	<li>What is the purpose of q.put(I)?</li>
+	<p>The <code>q.put(i)</code> function adds the items(i in this case) to the queue. This represents the producer producing an item and placing it into the buffer
+	for the consumer to process. It ensures that the item is securely stored in the queue and ready to be retrieved by the consumer.</p>
+	
+	<li>What is achieved by q.get()?</li>
+	<p>The <code>q.get()</code> function retrieves and removes an item from the queue. This is when the consumer retrieves the next available item to process. It blocks
+	the consumer thread if the queue is empty, ensuring synchronization by waiting until an item becomes available.</p>
+	
 <li>What functionality is provided by q.join()?</li>
+	<p>The <code>q.join()</code> function blocks the main thread until all items in the queue have been processed (i.e., both added and removed). It ensures that the 
+	program does not terminate prematurely before consumer threads consume and process all the produced items.</p>
+	
 <li>Extend this producer-consumer code to make the producer-consumer scenario available in a secure way. What technique(s) would be appropriate to apply?</li>
 </ul>
 										
 																	
 													       
 										
-										<p><b>RESPONSE:</b>How is the queue data structure used to achieve the purpose of the code?</p>
-										<br>
-										<p><b>RESPONSE:</b> What is the purpose of q.put(I)?</p>
-										<br>
-										<p><b>RESPONSE:</b> What is achieved by q.get()?</p>
-										<br>
-										<p><b>RESPONSE:</b> What functionality is provided by q.join()?</p>
-										<br>
-										<p><b>RESPONSE:</b> What technique(s) would be appropriate to apply?</p>
-										<br>
-
-										<section>
+																			<section>
 												
 										<div class="col-6 col-12-medium">
 										<ul class="actions">
