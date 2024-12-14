@@ -58,6 +58,21 @@
 										You may want to complete this activity in conjunction with or after completing Seminar 2 preparation.</p>
 										<ol>
 										<li>What is ReDOS and what part do ‘Evil Regex’ play?</li>
+											<p>ReDOS (Regular Expression Denial of Service) is a type of attack that exploits vulnerabilities in regex engines 
+											through carefully crafted input strings, forcing the engine into excessive backtracking. This leads to high CPU usage 
+											and, in severe cases, a complete denial of service.</p>
+
+											<li>Role of 'Evil Regex':</li>
+											"Evil regex" are patterns prone to catastrophic backtracking. These typically include:
+											<ol>
+											<li>Nested Quantifiers: For example, (a+)+, where the input "aaaaaaaaaaa!" triggers exponential backtracking.</li>
+											<li>Ambiguous Alternations: For example, (a|aa)*, which causes inefficiency in determining matching branches.</li>
+											<li>Greedy Wildcards: Patterns like .* exacerbate processing delays when combined with ambiguous inputs.</li>
+											<p>Such regex patterns allow attackers to craft input strings that increase processing time exponentially. For example, 
+											an input designed for the regex ^(a+)+$ (e.g., "aaaaaaaaaaaa!") can lead to excessive backtracking as the regex engine tries all possible combinations.</p>
+
+											<p>Weidman (n.d.) from OWASP explains that these vulnerabilities arise due to the backtracking mechanism of most regex engines, which attempts every possible 
+											combination to match the input string. An attacker can exploit this by providing inputs designed to maximize the computation time (Weidman, n.d.; Larson & Kirk, 2018).</p>
 											
 										<li>What are the common problems associated with the use of regex? How can these be mitigated?</li>
 											
