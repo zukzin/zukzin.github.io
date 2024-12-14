@@ -56,8 +56,8 @@
 										
 										<p>Read Larson (2018) and Weidman (n.d.) then answer the questions below, adding them as evidence to your e-portfolio. 
 										You may want to complete this activity in conjunction with or after completing Seminar 2 preparation.</p>
-										<ol>
-										<li><b>What is ReDOS and what part do ‘Evil Regex’ play?</b></li>
+										
+										<p><b>What is ReDOS and what part do ‘Evil Regex’ play?</b></p>
 											<p>ReDOS (Regular Expression Denial of Service) is a type of attack that exploits vulnerabilities in regex engines 
 											through carefully crafted input strings, forcing the engine into excessive backtracking. This leads to high CPU usage 
 											and, in severe cases, a complete denial of service.</p>
@@ -75,7 +75,7 @@
 											<p>Weidman (n.d.) from OWASP explains that these vulnerabilities arise due to the backtracking mechanism of most regex engines, which attempts every possible 
 											combination to match the input string. An attacker can exploit this by providing inputs designed to maximise the computation time (Weidman, n.d.; Larson & Kirk, 2018).</p>
 											
-										<li><b>What are the common problems associated with the use of regex? How can these be mitigated?</b></li>
+										<p><b>What are the common problems associated with the use of regex? How can these be mitigated?</b></p>
 <p><b>Common Problems:</b></p>
 <ol>
 <li>Error-Prone Syntax:</li>
@@ -122,18 +122,36 @@
 										<li>Regularly review and test regex, avoiding wildcards and greedy quantifiers unless strictly necessary.</li>
 										</ul>
 											
-										<ol>	
-										<li><b>How and why could regex be used as part of a security solution?</b></li>
+										<p><b>How and why could regex be used as part of a security solution?</b></p>
 										<p>Regex is widely used in security to validate, sanitize, and detect patterns within input data.</p>
-										<b>Why Use Regex in Security?</b>Regex ensures inputs adhere to expected formats, thereby:
+										<p>Why Use Regex in Security?nRegex ensures inputs adhere to expected formats, thereby:</p>
 										<ul>
 										<li>Preventing injection attacks.</li>
 										<li>Detecting malicious patterns in user input.</li>
 										<li>Ensuring compliance with formatting rules for emails, phone numbers, and other structured data.</li>
 										</ul>
-											
-										
-										</ol>
+										<p><b>Regex in Security Solutions</b></p>
+										<li>Input Validation:</li>
+										<ul>
+										<li>Regex can verify input formats such as email addresses or phone numbers.</li>
+										<li>Example: A regex for email validation: ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$.</li>
+										</ul>
+										<li>Threat Detection:</li>
+										<ul>
+										<li>Used in Intrusion Detection Systems (IDS) to scan logs and network traffic for attack patterns, e.g., SQL injection attempts or XSS payloads.</li>
+										</ul>
+										<li>OWASP Recommendations:</li>
+										<ul>
+										<li>Refactor "evil regex" to safer forms.</li>
+										<li>Test regex extensively with tools like EGRET and ACRE to identify and eliminate potential vulnerabilities (Weidman, n.d.; Larson, 2018).</li>
+										<p>Regex is powerful for security but must be applied cautiously. Adopting OWASP guidelines and rigorous testing practices can maximize regex benefits while minimizing risks.</p>
+										</ul>
+
+										<p><b>References</b></p>
+										<p>Larson, E. (2018) Automatic Checking of Regular Expressions. Available at: http://fac-staff.seattleu.edu/elarson/web/regex.htm (Accessed: 14 December 2024).</p>
+										<p>Larson, E. and Kirk, A. (2018) Generating Evil Test Strings for Regular Expressions. Available at: http://fac-staff.seattleu.edu/elarson/web/egret.htm (Accessed: 13 December 2024).</p>
+										<p>OWASP (n.d.) Regular Expression Denial of Service (ReDoS). Available at: https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS (Accessed: 13 December 2024).</p>
+										<p>Weidman, J. (n.d.) ‘ReDoS: Exploiting Catastrophic Backtracking in Regex’. Available at: https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS (Accessed: 13 December 2024).</p>
 										<br>
 
 										<section>
