@@ -96,8 +96,36 @@
 <ul>
 <li>Improperly constructed regex can allow attackers to trigger excessive processing, causing denial of service (Weidman, n.d.; Larson & Kirk, 2018).</li>
 </ul>
+</ol>
+										<p>Mitigation Strategies</p>
+										<ol>
+										<li>Optimise Regex Patterns:</li>
+										<ul>
+										<li>Avoid nested quantifiers and ambiguous alternations.</li>
+										<li>Refactor inefficient patterns into simpler, more deterministic versions (Larson, 2018).</li>
+										</ul>
+										<li>Use Testing Tools:</li>
+										<ul>
+										<li>EGRET: Generates test cases to identify bugs in regex.</li>
+										<li>ACRE: Detects common errors such as bad ranges, duplicate punctuation, and misplaced anchors (Larson & Kirk, 2018; Larson, 2018).</li>
+										</ul>
+										<li>Limit Input Size:</li>
+										<ul>
+										<li>Cap the input length for regex evaluation to mitigate potential ReDOS exploits.</li>
+										</ul>
+										<li>Follow OWASP Guidelines:</li>
+										<ul>
+										<li>Refactor patterns prone to excessive backtracking and use DFA-based regex engines where feasible (Weidman, n.d.).</li>
+										</ul>
+										<li>Adopt Best Practices:</li>
+										<ul>
+										<li>Regularly review and test regex, avoiding wildcards and greedy quantifiers unless strictly necessary.</li>
+										</ul>
+
+
 											
-										<li><b>How and why could regex be used as part of a security solution?</b></li>
+										<ol>	
+										<p><b>How and why could regex be used as part of a security solution?</b></p>
 											
 										
 										</ol>
