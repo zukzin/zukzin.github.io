@@ -64,9 +64,9 @@
 
 											<p>Role of 'Evil Regex'- "Evil regex" are patterns prone to catastrophic backtracking. These typically include:</p>
 											<ul>
-											<li>Nested Quantifiers: For example, (a+)+, where the input "aaaaaaaaaaa!" triggers exponential backtracking.</li>
-											<li>Ambiguous Alternations: For example, (a|aa)*, which causes inefficiency in determining matching branches.</li>
-											<li>Greedy Wildcards: Patterns like .* exacerbate processing delays when combined with ambiguous inputs.</li>
+											<li>Nested Quantifiers: For example,<code>(a+)+</code>, where the input "aaaaaaaaaaa!" triggers exponential backtracking.</li>
+											<li>Ambiguous Alternations: For example, <code>(a|aa)*</code>, which causes inefficiency in determining matching branches.</li>
+											<li>Greedy Wildcards: Patterns like <code>.*</code> exacerbate processing delays when combined with ambiguous inputs.</li>
 												
 											<p>Such regex patterns allow attackers to craft input strings that increase processing time exponentially. For example, 
 											an input designed for the regex ^(a+)+$ (e.g., "aaaaaaaaaaaa!") can lead to excessive backtracking as the regex engine tries all possible combinations.</p>
@@ -81,16 +81,16 @@
 <li>Error-Prone Syntax:</li>
 <ul>
 <li>Regex syntax is concise and can easily lead to mistakes such as incorrect quantifiers or misplaced anchors, resulting in unintended matches.</li>
-<li>Example: ^dog|cat$ matches "dog" or any string ending in "cat," but not just "dog" or "cat" (Larson, 2018).</li>
+<li>Example: <code>^dog|cat$</code> matches "dog" or any string ending in "cat," but not just "dog" or "cat" (Larson, 2018).</li>
 </ul>
 <li>Excessive Backtracking:</li>
 <ul>
-<li>Regex patterns like .*(a|b)* are inefficient and can significantly degrade performance when processing long inputs.</li>
-<li>Example: (a+)+ causes exponential backtracking with certain inputs (Weidman, n.d.).</li>
+<li>Regex patterns like <code>.*(a|b)*</code> are inefficient and can significantly degrade performance when processing long inputs.</li>
+<li>Example: <code>(a+)+</code> causes exponential backtracking with certain inputs (Weidman, n.d.).</li>
 </ul>
 <li>Misuse of Wildcards and Character Sets:</li>
 <ul>
-<li>Wildcards (.*) and overly broad character sets ([a-zA-Z]) can lead to unintended matches, introducing security risks.</li>
+<li>Wildcards <code>(.*)</code> and overly broad character sets <code>([a-zA-Z])</code> can lead to unintended matches, introducing security risks.</li>
 </ul>
 <li>ReDOS Vulnerabilities:</li>
 <ul>
@@ -135,7 +135,7 @@
 										<li>Input Validation:</li>
 										<ul>
 										<li>Regex can verify input formats such as email addresses or phone numbers.</li>
-										<li>Example: A regex for email validation: ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$.</li>
+										<li>Example: A regex for email validation: <code>^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$</code>.</li>
 										</ul>
 										<li>Threat Detection:</li>
 										<ul>
