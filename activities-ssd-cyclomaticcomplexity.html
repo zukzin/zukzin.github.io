@@ -60,9 +60,51 @@
 										<p><b>Teamwork</b></p>
 										<p>You can share your team responses with the tutor for formative feedback or discuss it in next week’s seminar.</p>
 										
-										<p><b>RESPONSE:</b> This is placeholder for the response</p>
-																									
+										<p>Cyclomatic Complexity, introduced by Thomas J. McCabe in 1976, measures the number of linearly independent paths through a program’s 
+										source code (McCabe, 1976; GeeksforGeeks, n.d.). Historically, it has been a key metric in the software testing domain to estimate test 
+										coverage, maintainability, and code quality. Although software development paradigms and technologies have evolved substantially since 
+										its inception, Cyclomatic Complexity still holds relevance in understanding code complexity, maintainability, and potential fault-proneness (GeeksforGeeks, n.d.). 
+										However, its application and emphasis may warrant reconsideration in the context of modern secure software design.</p>
 
+										<p>In terms of Maintainability and Readability today, a high Cyclomatic Complexity often correlates with more intricate control flows, making the code harder to read 
+										or maintain (GeeksforGeeks, n.d.). In a contemporary development environment—where rapid iteration, continuous integration, and frequent code reviews are standard 
+										practices—maintainability remains a critical concern. Code with high complexity can impede developers’ ability to quickly understand and modify software, often leading 
+										to defects or vulnerabilities introduced through misunderstanding or insufficient testing (McCabe, 1976).</p>
+
+										<p>When it comes to testing efficiency Cyclomatic Complexity still provides a baseline for identifying the minimum number of tests needed for full branch coverage, making 
+										it a useful heuristic in test strategy (GeeksforGeeks, n.d.). Given the agile and DevOps cultures prevalent in modern software engineering, comprehensive testing is vital. 
+										A high Cyclomatic Complexity suggests more test cases are required to cover all possible paths, emphasising the importance of adequate automated tests to mitCritics argue that 
+										Cyclomatic Complexity does not account for complexities arising from modern paradigms, such as concurrency, distributed systems, and microservices (Pressman & Maxim, 2020). Simply measuring the 
+										branching complexity of a single module may not capture the systemic risks in highly integrated environments. Moreover, CC does not directly measure complexity introduced
+										by dependencies, external services, or asynchronous flows—common in modern cloud-native architectures (GeeksforGeeks, n.d.).igate regressions 
+										and vulnerabilities (Myers et al., 2011).</p>
+
+										<p>Critics argue that Cyclomatic Complexity does not account for complexities arising from modern paradigms, such as concurrency, distributed systems, and microservices (Pressman & Maxim, 2020). 
+										Simply measuring the branching complexity of a single module may not capture the systemic risks in highly integrated environments. Moreover, Cyclomatic Complexity does not directly measure 
+										complexity introduced by dependencies, external services, or asynchronous flows—common in modern cloud-native architectures (GeeksforGeeks, n.d.).</p>
+
+										<p><b>Relevance to SSD (Secure Software Development</b> When considering security, an overly overly complex code can obscure hidden pathways and make it easier for vulnerabilities to go undetected 
+										(Howard & Lipner, 2006). Complexity may also deter thorough code reviews, as developers spend more time deciphering logic (McGraw, 2006). Therefore, while CC alone is not a direct measure 
+										of security, it can act as an early-warning indicator—excessive complexity might correlate with an increased risk of logic errors, buffer overflows, or injection flaws that malicious actors 
+										could exploit.</p>
+
+										<p>Secure coding guidelines emphasize minimizing complexity to reduce the probability of introducing security-related defects (Seacord, 2013). By maintaining a lower CC, development teams can more 
+										effectively apply secure coding rules and systematically verify them. As such, CC still plays a supportive role in shaping secure coding practices, even if it should not be the sole metric 
+										used to gauge software security (OWASP, 2023)</p>
+
+										<p>In the quest to develop secure software, CC should be considered alongside other metrics such as code coverage, static analysis findings, and design-level threat modeling (Howard & Lipner, 2006; McGraw, 2006). 
+										This multi-pronged approach better evaluates the overall security posture. CC remains relevant insofar as it contributes to controlling and maintaining manageable complexity, which in turn supports a secure and 
+										robust codebase.</p>
+
+										<p>Conclusion</p>
+										<p>Cyclomatic Complexity remains a pertinent measure in modern software engineering for understanding maintainability and guiding testing practices (GeeksforGeeks, n.d.; McCabe, 1976). While it may not capture all 
+										facets of modern architectures—particularly those involving concurrency, distributed services, and complex integrations, it still provides a foundational perspective on code structure. In the context of secure 
+										software development. Alone is not sufficient to ensure security, however, as part of a holistic set of metrics and practices, it offers tangible benefits in detecting areas of the code that might benefit 
+										from additional scrutiny. Therefore it continues to be relevant and should be retained in modules that emphasise both code design validity and secure software development, although as one component of a comprehensive 
+										quality and security assurance process (Howard & Lipner, 2006; McGraw, 2006).
+
+.</p>
+											
 										<br>
 
 											<section>
