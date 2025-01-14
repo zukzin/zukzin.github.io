@@ -61,16 +61,32 @@
 										equivalent before printing the result.</p>
 
 										<p>test_equivalence_partition() produces the following output:</p>
-
-										<pre><code>
-										set([1, -3]) set([2, -2]) set([3, -1]) set([0, 4]) 0 : set([0, 4]) 1 : set([1, -3]) 2 : set([2, -2]) 3 : set([3, -1]) 4 : set([0, 4]) -2 : set([2, -2]) -3 : set([1, -3]) -1 : set([3, -1])
-										</pre></code>
+<pre><code>
+set([1, -3]) set([2, -2]) set([3, -1]) set([0, 4]) 0 : set([0, 4]) 1 : set([1, -3]) 2 : set([2, -2]) 3 : set([3, -1]) 4 : set([0, 4]) -2 : set([2, -2]) -3 : set([1, -3]) -1 : set([3, -1])
+</pre></code>
 										
 										<p>You should carry out further investigations on the code and experiment with it.</p>
 										
 
-										<p><b>RESPONSE:</b> THE RESPONSE TO THE CODE EXPERIMENT WILL BE HERE MODEL</p>
-										<pre><code> #place holder for the code experiment </code></pre>
+										<p><b>What Is Equivalence Partitioning?</b> Equivalence partitioning is the testing technique where inputs are grouped together based on shared characteristics for a 
+										specific condition (Beizer, 1995). Example, when determining if (x - y)%4 = 0, x and y belong to the same group if they have the same remainder 
+										when divided by 4.</p>
+<pre><code> 
+0 : set([0, 4])*
+1 : set([1, -3])**
+2 : set([2, -2)]
+3 : set([3, -1)]
+4 : set([0, 4])*
+-2 : set([2, -2])
+-3 : set([1, -3])**
+-1 : set([3, -1])
+</code></pre>
+										<p>This shows that "Integer 0 is in the set that contains 0 and 4," marked in * and "Integer 1 is in the set that contains 1 and -3" marked ** etc. This testing is aimed
+										at reducing test cases. Instead of testing every single integer from -3 to 5, we pick one integer from each equivalence class, because all integers in the same class will 
+										be treated "the same" by the condition (x -y)%4 = 0. The script uses a lambda function (x - y)%4 = 0 to check whether two numbers are in the same equivalence class. If they have 
+										the same remainder when divided by 4, they then go into the same set.  For instance, for the range [-3, 5], this creates four classes: {-3,1}, {-2,2}, {-1,3} and {0,4}. The 
+										output first lists these sets and then shows for each individual integer which set it belongs to. In testing, this is an example of equivalence partitioning, which means we only 
+										need to test one number from each set rather than testing every number in the entire range</p>
 										<br>
 
 																								
