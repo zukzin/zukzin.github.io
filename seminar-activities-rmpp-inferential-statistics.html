@@ -63,15 +63,16 @@
 
 										<li><strong>The INDEPENDENT Samples T Test</strong></li>
 										<p>In Exercise 7.2, the requirement is to test whether the population mean income for males exceeds that of females and interpret it. It also asks to mention assumptions and how to validate them.	
-										<p>To answer the question, an independent samples of two-sample t-test assuming unequal variances was performed link here <a href="https://github.com/zukzin/zukzin.github.io/raw/8bc2c089393acafeaf0820f38639791e238c9a59/images/two-sample%20t-test%20assuming%20unequal%20variances.xlsx" download>see here</a>, (to determine whether the population mean income for males exceeds that of females. 
-										Prior to the t-test, an F-test for equality of variances was performed, yielding a p-value of 0.436, indicating no significant difference in 
-										variances. Therefore, the t-test assuming equal variances was used. The results showed that the mean income for males was 52.91, while for females it was 44.23. 
-										The one-tailed t-test produced a t-statistic of 3.27 with a p-value of 0.00071. As the p-value is less than 0.05, we reject the null hypothesis and conclude that 
-										there is strong evidence that the population mean income for males is significantly greater than that for females.</p>
+										<p>To answer the question, an independent samples t-test of two-sample t-test assuming unequal variances was performed link here <a href="https://github.com/zukzin/zukzin.github.io/raw/8bc2c089393acafeaf0820f38639791e238c9a59/images/two-sample%20t-test%20assuming%20unequal%20variances.xlsx" download>see here</a>, 
+										(Note: Excel doesn’t print H₀) to determine whether the population mean income for males exceeds that of females. 
+										Prior to the t-test, an F-test 1.203 with a two-tailed p-value of 0.432, indicating that the assumption of equal 
+										population variances was reasonable. Subsequently, a two-sample t-test assuming unequal variances was performed. 
+										The test yielded a t-statistic of 1.926 with a one-tailed p-value of 0.056. Since the p-value is greater than the 5% significance level, 
+										we fail to reject the null hypothesis. Therefore, there is insufficient statistical evidence to conclude that the mean income for male cardholders is greater than that for female cardholders.</p>
 
-										<p><Strong>The validity of this analysis depends on several assumptions:</Strong> independence of samples, approximate normality of income distributions within each group, and equality of variances. 
-										Independence is satisfied by the design of the study. Normality was assessed through visual inspection of histograms (link here), which suggested slight skewness but acceptable 
-										approximation for t-testing purposes. Equality of variances was confirmed via the F-test. Overall, the assumptions appear reasonably met.</p>
+										<p><Strong>The validity of this analysis depends on the assumptions that the samples are independent, the incomes are approximately normally distributed within each group, 
+										and the income variances are comparable, as confirmed by the F-test. To further validate the normality assumption, graphical methods such as histograms or normal probability plots 
+									        (Q-Q plots) could be employed, or formal tests such as the Shapiro-Wilk test could be conducted.</p>
 
 										
 
